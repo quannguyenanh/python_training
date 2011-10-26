@@ -1,6 +1,6 @@
 from sys import argv
 
-X = 5
+X = argv[2]
 
 def ham_mu(N):    
     return (X**N)    
