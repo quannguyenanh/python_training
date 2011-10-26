@@ -39,7 +39,6 @@ print sum
  
 print_matrix(matrix_array)
 
-
 # part b    
 out_matrix = []           
 for i in words:
@@ -47,4 +46,4 @@ for i in words:
         out_matrix.append(i)
     else:
         out_matrix.append("x")
-print_matrix(out_matrix)                             
+print_matrix(out_matrix)                    
