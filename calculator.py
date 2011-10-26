@@ -18,13 +18,10 @@ elif argv[2] == "-":
     sub()
 elif argv[2] == "*":
     mul()
-    #print argv[2]
     print "Special case, here * is not known as multiply symbol should use \* instead, FTW"
 elif argv[2] == "/":
     div()            
 elif argv[2] == "%":
     mod()
 else:
-    print "Express error!"        
-    
-                
+    print "Express error!"

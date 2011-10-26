@@ -22,5 +22,3 @@ while True:
             break
             
 current_file.close()            
-
-
