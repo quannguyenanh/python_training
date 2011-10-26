@@ -1,9 +1,9 @@
 from sys import argv
-X = 5
+
+X = float(argv[2])
 
 def ham_mu(N):    
-    return (X**N)
-    
+    return (X**N)    
     
 command = argv[1]
  
