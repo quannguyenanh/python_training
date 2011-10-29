@@ -15,7 +15,7 @@ while True:
     words = break_words(line)
   
     if len(argv) < 2:
-        print "Shell of user %s: %s:" %(words[0], words[-1])               
+        print "%s -> :%s" %(words[0], words[-1])               
     else:
         if(argv[1] == words[0]): #(username != ' ') and
             print "Shell of user %s: %s" %(words[0],words[-1]) 

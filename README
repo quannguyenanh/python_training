@@ -1,0 +1,2 @@
+Note:
+  1. Exponent python run as: ./exp_edit.py ham_mu_x y (will return y^x)
