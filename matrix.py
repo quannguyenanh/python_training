@@ -1,49 +1,46 @@
-def print_matrix(array):  
-    while array !=[]:    
-        print "%s\n" % array[:N]        
-        array = array[N:]
-        
-print ("Input size of a matrix N x N: ")
-
-matrix_size = int(raw_input("Size of matrix: >"))
-
+from __future__ import print_function
+import math
+ 
+def create_matrix(size, array):
+    square_matrix = []
+    k = 0
+    for i in range(size):  
+        square_matrix.append([])
+        for j in range(size):
+            square_matrix[i].append(int(array[k]))
+            k += 1
+    return square_matrix    
+		
 matrix_array = []
-   
-print ("You want to creat a matrix of %d x %d") %(matrix_size, matrix_size)
-    
-input_array = raw_input("Enter number array of the matrix each number is seperated by a space: \n>")
 
-N = matrix_size
+input_array = raw_input("Enter number array of the matrix each number is seperated by a space: \n>")
 
 words = input_array.split(" ")
 
-for i in words:
-    matrix_array.append(i)
-    
-print matrix_array 
+N = int(math.sqrt(len(words)))
 
+print (words)
+
+matrix = create_matrix(N, words)
+          
 # part a
 sum = 0
 for i in range(N):
-    for j in range(N):
-        if i==j:
-            sum += int(matrix_array[(i)*(j+N)])
-print sum
+    sum += int(matrix[i][i])
+print (sum)
 
 sum = 0
+
+for i in range(N):
+    sum += int(matrix[N-i-1][i])
+print (sum)
+ 
+# part b    
 for i in range(N):
     for j in range(N):
-        if i==j:
-            sum += int(matrix_array[((i+1)*(j+N) - N - 1)])
-print sum
- 
-print_matrix(matrix_array)
-
-# part b    
-out_matrix = []           
-for i in words:
-    if ((int(i) % 2) == 0) and (int(i) > 0):        
-        out_matrix.append(i)
-    else:
-        out_matrix.append("x")
-print_matrix(out_matrix)                    
+        if ((matrix[i][j] % 2) == 0) and (matrix[i][j] > 0):        
+            pass
+        else:
+            matrix[i][j] = "x"
+        print('{0:>4}'.format(str(matrix[i][j])), end='')
+    print("")                      
